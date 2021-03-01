@@ -1,0 +1,106 @@
+{
+  "products": [
+    {
+      "name": "Диван",
+      "code": "1234754",
+      "price": "20000",
+      "producer": "Россия",
+      "category": 0,
+      "weight": "2000",
+      "quantity": "4",
+      "id": 1
+    },
+    {
+      "name": "Отверженные",
+      "code": "1236254",
+      "price": 500,
+      "producer": "Эксмо",
+      "category": 2,
+      "weight": 2000,
+      "quantity": 15,
+      "id": 2,
+      "count": null
+    },
+    {
+      "name": "Samsung Galaxy A21",
+      "code": "6244754",
+      "price": 21100,
+      "producer": "Корея",
+      "category": 3,
+      "weight": 2000,
+      "quantity": 12,
+      "id": 3
+    },
+    {
+      "name": "Микроволновка",
+      "code": "1780254",
+      "price": 5789,
+      "producer": "Италия",
+      "category": 1,
+      "weight": 2000,
+      "quantity": "5",
+      "id": 4
+    },
+    {
+      "name": "Шкаф",
+      "code": "5303754",
+      "price": 40000,
+      "producer": "Швеция",
+      "category": 0,
+      "weight": 2000,
+      "quantity": 0,
+      "id": 5
+    },
+    {
+      "name": "Бесы",
+      "code": "8003654",
+      "price": 329,
+      "producer": "Эксмо",
+      "category": 2,
+      "weight": 2000,
+      "quantity": 2,
+      "id": 6
+    },
+    {
+      "name": "Xiaomi Redmi 5",
+      "code": "7425806",
+      "price": 12500,
+      "producer": "Китай",
+      "category": 3,
+      "weight": 2000,
+      "quantity": 3,
+      "id": 7
+    },
+    {
+      "name": "Чайник",
+      "code": "1234001",
+      "price": 1699,
+      "producer": "Германия",
+      "category": 1,
+      "weight": 2000,
+      "quantity": 21,
+      "id": 8
+    },
+    {
+      "name": "Идиот",
+      "code": "2014863",
+      "price": 350,
+      "producer": "Росмэн",
+      "category": 2,
+      "weight": 2000,
+      "quantity": 10,
+      "id": 9,
+      "count": null
+    },
+    {
+      "name": "Диван2",
+      "code": "1234757уа",
+      "price": "23501",
+      "producer": null,
+      "category": 0,
+      "weight": "5000",
+      "quantity": "47",
+      "id": 10
+    }
+  ]
+}

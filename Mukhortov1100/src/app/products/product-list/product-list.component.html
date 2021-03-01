@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row my-5">
+    <div class="col-12">
+      <h5>Поиск по категории</h5>
+      <input type="search" class="form-control"  placeholder="Поиск"  [(ngModel)]="searchStr" />
+    </div>
+  </div>
+
+  <!-- <div class="row my-5">
+    <div class="col-12">
+      <h5>Фильтрация</h5>
+      <select class="form-control col-4 my-2" [(ngModel)]="column1">
+        <option value="furniture">Мебель</option>
+        <option value="technics">Техника</option>
+        <option value="books">Книги</option>
+        <option value="phones">Телефоны</option>
+      </select>
+      <div class="col-4">
+        Количество больше 0 <input type="checkbox" [(ngModel)]="amoung">
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row my-3">
+    <div class="col-2">
+      <b>Сортировать по </b></div>
+    <div class="col-4">
+      <select class="form-control" [(ngModel)]="column">
+        <option value="byprice">цене</option>
+        <option value="byquantity">кол-ву на складе</option>
+      </select>
+    </div>
+    <div class="col-3">
+      от большего к меньшему <input type="checkbox" [(ngModel)]="reverse">
+    </div>
+  </div>
+  <div class="row mt-5 mb-2">
+    <div class="col-12">
+      <h3>Каталог товаров</h3>
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Название</th>
+        <th scope="col">Категория</th>
+        <th scope="col">Вес</th>
+				<th scope="col">Цена</th>
+				<th scope="col">Кол-во на складе</th>
+        <th scope="col"></th>
+        <th class="text-right" scope="col">
+          <button class="btn btn-primary" (click)="onAddProduct()">
+            Добавить товар
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products | sort:column:reverse">
+        <!-- <td scope="row">{{ product.id }}</td> -->
+				<td >{{ product.name }}</td>
+				<td>{{ product.category | category }}</td>
+        <td>{{ product.weight }}</td>
+        <td>{{ product.price | currency:'RUB':'symbol-narrow':'.0'}}</td>
+        <td>
+          <button class="btn btn-outline-info btn-sm" 
+          (click)="onMinus(product.id)"
+          >-</button>
+          {{ product.quantity }}
+          <button class="btn btn-outline-info btn-sm"
+          (click)="onPlus(product.id)"
+          >+</button>
+        </td>
+          
+
+        <td class="text-right">
+          <button class="btn btn-outline-primary" (click)="onLinkProduct(product.id)">
+            Редактировать
+          </button>
+        </td>
+        <td class="text-right">
+          <button class="btn btn-outline-danger modal-exit mr-2" (click)="onDelete(product.id)">
+            Удалить
+          </button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

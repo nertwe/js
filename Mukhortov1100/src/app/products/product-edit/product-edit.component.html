@@ -1,0 +1,43 @@
+<div class="container">
+  <form [formGroup]="productForm">
+    <div class="form-group">
+      <label for="productname">Название</label>
+      <input type="text" class="form-control" id="productname" placeholder="Название" formControlName="name" />
+    </div>
+    <div class="form-group">
+      <label for="productcode">Артикул</label>
+      <input type="text" class="form-control" id="productcode" placeholder="Артикул" formControlName="code" />
+    </div>
+    <div class="form-group">
+      <label for="productprice">Цена</label>
+      <input type="text" class="form-control" id="productprice" placeholder="Цена" formControlName="price" />
+    </div>
+    <div class="form-group">
+      <label for="productproducer">Производитель</label>
+      <input type="text" class="form-control" id="productproducer" placeholder="Производитель" formControlName="producer" />
+		</div>
+
+		<select class="mt-3 mb-3 custom-select" formControlName="category">
+      <option [ngValue]="myProductCategory.furniture">Мебель</option>
+      <option [ngValue]="myProductCategory.technics">Техника</option>
+      <option [ngValue]="myProductCategory.books">Книги</option>
+      <option [ngValue]="myProductCategory.phones">Телефоны</option>
+		</select>
+		
+    <div class="form-group">
+      <label for="productweight">Вес</label>
+      <input type="mail" class="form-control" id="productweight" placeholder="Вес" formControlName="weight" />
+    </div>
+    <div class="form-group">
+      <label for="productquantity">Кол-во на складе</label>
+      <input class="form-control" id="productquantity" placeholder="Кол-во на складе"
+        formControlName="quantity" />
+    </div>
+
+    <button class="btn btn-primary mr-4" [disabled]="productForm.invalid" (click)="onSave()">
+      Сохранить
+    </button>
+    <button class="btn btn-danger" *ngIf="id != null" (click)="onDelete()">Удалить</button>
+  </form>
+</div>
+
